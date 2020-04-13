@@ -1,0 +1,16 @@
+name: MCPEDiscordRelay
+main: MCPEDiscordRelay\Main
+version: 1.0.0
+api: 3.0.0
+author: Nomadjimbob
+description: Send console to a discord server
+website: https://github.com/nomadjimbob/MCPEDiscordRelay
+commands:
+ example:
+  description: Version command
+  usage: "/version"
+  permission: mcpediscordrelay.command.version
+permissions:
+ mcpediscordrelay.command.version:
+  description: "Shows the version of the plugin"
+  default: true
