@@ -3,7 +3,7 @@ Connect your PocketMine server to output to a Discord channel using a WebHook. B
 
 Version: 1.0.1
 Author: Nomadjimbob (hello@jamescollins.com.au)
-GitHub: (https://github.com/nomadjimbob/MCPEDiscordRelay)
+Source: (https://github.com/nomadjimbob/MCPEDiscordRelay)
 
 # Features
   * Relay PocketMine console to Discord
