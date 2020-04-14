@@ -12,9 +12,13 @@ Source: (https://github.com/nomadjimbob/MCPEDiscordRelay)
   * Includes chat and commands from players (even /talk)
 
 # Configuration
-enabled: If the plugin is enabled or not
-discord_webhook_url: Your discord webhook url
-discord_webhook_name: The username the plugin uses in discord
+config.yml options:
+
+**enabled**: If the plugin is enabled or not
+
+**discord_webhook_url**: Your discord webhook url
+
+**discord_webhook_name**: The username the plugin uses in discord
 
 ## Making a Discord webhook:
 1. Open Discord
@@ -25,9 +29,10 @@ discord_webhook_name: The username the plugin uses in discord
 6. Click "Copy" under Webhook URL
 7. Paste it in the config
 
-## Issues
+# Issues
 As per the original plugin, this does not work on servers hosted on specific devices that do not have 'cURL' installed (eg android phone).
 
-## Change log
+# Change log
 1.0.1 - Fixed bug with curl response error message missing in certain circumstances
+
 1.0.0 - Inital Release
