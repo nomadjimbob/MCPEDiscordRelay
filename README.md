@@ -28,11 +28,15 @@ discord_webhook_name: The username the plugin uses in discord.
 7. Paste it in the config
 
 
+## Changelog
+1.0.1 - Fixed bug with curl response error message missing in certain circumstances
+1.0.0 - Inital Release
+
 MCPEDiscordRelay
 
 Author: Nomadjimbob (james.collins@outlook.com.au)
 
-Version: 1.0
+Version: 1.0.1
 
 Based on the MCPEDiscord plugin, sends the console to a discord channel using a discord webhook url.
 
