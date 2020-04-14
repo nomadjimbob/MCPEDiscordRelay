@@ -5,4 +5,5 @@ branches:
 projects:
   MCPEDiscordRelay:
     path: ""
+    icon: "icon.png"
 ...
