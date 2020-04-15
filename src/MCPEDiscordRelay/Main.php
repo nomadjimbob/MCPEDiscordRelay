@@ -59,7 +59,7 @@ class Main extends PluginBase implements Listener {
 	public function onCommand(CommandSender $sender, Command $command, string $label, array $args) : bool{
 		switch($command->getName()){
 			case "version":
-				$sender->sendMessage("1.0");
+				$sender->sendMessage("1.0.2");
 				return true;
 			default:
 				return false;
@@ -85,12 +85,17 @@ class Main extends PluginBase implements Listener {
 		
 			if($this->attachment == null) {
 				$this->attachment = new Attachment();
+
+				if($this->getConfig()->get("send_console") !== true) {
+					$this->attachment->enabled = false;
+				}
+
 				$this->getServer()->getLogger()->addAttachment($this->attachment);
 
-                                $mtime = intval($this->getConfig()->get("discord_webhook_refresh", 10)) * 20;
-                                $this->task = $this->getScheduler()->scheduleRepeatingTask(new Broadcast($this), $mtime);
+                $mtime = intval($this->getConfig()->get("discord_webhook_refresh", 10)) * 20;
+                $this->task = $this->getScheduler()->scheduleRepeatingTask(new Broadcast($this), $mtime);
 
-                                $this->getServer()->getPluginManager()->registerEvents($this, $this);
+                $this->getServer()->getPluginManager()->registerEvents($this, $this);
 
 				$this->enabled = true;
 				return true;

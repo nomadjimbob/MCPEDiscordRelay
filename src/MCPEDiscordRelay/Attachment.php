@@ -6,14 +6,18 @@ use pocketmine\utils\Terminal;
 
 class Attachment extends \ThreadedLoggerAttachment implements \LoggerAttachment {
 
-    private $stream = "";    
+    private $stream = "";
+    private $enabled = true;
 
     public function __construct() {
 
     }
 
     public function log($level, $message) {
-        $this->stream.= Terminal::toANSI($message) . "\r\n";
+        $msg = Terminal::toANSI($message) . "\r\n";
+        if($this->enabled) {
+            $this->stream.= $msg;
+        }
     }
 
     public function appendStream($msg) {
