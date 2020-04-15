@@ -29,4 +29,8 @@ class Attachment extends \ThreadedLoggerAttachment implements \LoggerAttachment 
         $this->stream = "";
         return $stream;
     }
+
+    public function enable($enable) {
+        $this->enabled = $enable;
+    }
 }

@@ -87,7 +87,7 @@ class Main extends PluginBase implements Listener {
 				$this->attachment = new Attachment();
 
 				if($this->getConfig()->get("send_console") !== true) {
-					$this->attachment->enabled = false;
+					$this->attachment->enable(false);
 				}
 
 				$this->getServer()->getLogger()->addAttachment($this->attachment);
