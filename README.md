@@ -1,7 +1,7 @@
 # MCPEDiscordRelay
 Connect your PocketMine server to output to a Discord channel using a WebHook. Based on the archived plugin [MCPEToDiscord](https://poggit.pmmp.io/p/MCPEToDiscord) by JaxkDev and DiscordMCPE by NiekertDev
 
-Version: 1.0.1
+Version: 1.0.2
 
 Author: Nomadjimbob (hello@jamescollins.com.au)
 
