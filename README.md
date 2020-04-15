@@ -1,3 +1,6 @@
+<a href="https://discord.gg/fpGK9Vr"><img src="https://discordapp.com/api/guilds/699956067781705759/embed.png" alt="Discord server"/></a>
+<a href="https://poggit.pmmp.io/p/MCPEDiscordRelay"><img src="https://poggit.pmmp.io/shield.state/MCPEDiscordRelay"></a>
+
 # MCPEDiscordRelay
 Connect your PocketMine server to output to a Discord channel using a WebHook. Based on the archived plugin [MCPEToDiscord](https://poggit.pmmp.io/p/MCPEToDiscord) by JaxkDev and DiscordMCPE by NiekertDev
 
