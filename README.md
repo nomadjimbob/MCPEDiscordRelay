@@ -4,7 +4,7 @@
 # MCPEDiscordRelay
 Connect your PocketMine server to output to a Discord channel using a WebHook. Based on the archived plugin [MCPEToDiscord](https://poggit.pmmp.io/p/MCPEToDiscord) by JaxkDev and DiscordMCPE by NiekertDev
 
-Version: 1.0.2
+Version: 1.0.3
 
 Author: Nomadjimbob (hello@jamescollins.com.au)
 
@@ -38,6 +38,8 @@ config.yml options:
 As per the original plugin, this does not work on servers hosted on specific devices that do not have 'cURL' installed (eg android phone).
 
 # Change log
+1.0.3 - Fixed namspace issue
+
 1.0.2 - Fixed version command to report correct version. Added config option send_console
 
 1.0.1 - Fixed bug with curl response error message missing in certain circumstances

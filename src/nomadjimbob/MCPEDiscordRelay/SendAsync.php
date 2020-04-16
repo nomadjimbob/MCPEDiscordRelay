@@ -1,5 +1,5 @@
 <?php
-namespace MCPEDiscordRelay;
+namespace nomadjimbob\MCPEDiscordRelay;
 
 use pocketmine\scheduler\AsyncTask;
 use pocketmine\Server;

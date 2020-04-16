@@ -7,7 +7,7 @@
  */
 declare(strict_types=1);
 
-namespace MCPEDiscordRelay;
+namespace nomadjimbob\MCPEDiscordRelay;
 
 use pocketmine\plugin\PluginBase;
 use pocketmine\event\Listener;
@@ -59,7 +59,7 @@ class Main extends PluginBase implements Listener {
 	public function onCommand(CommandSender $sender, Command $command, string $label, array $args) : bool{
 		switch($command->getName()){
 			case "version":
-				$sender->sendMessage("1.0.2");
+				$sender->sendMessage("1.0.3");
 				return true;
 			default:
 				return false;
