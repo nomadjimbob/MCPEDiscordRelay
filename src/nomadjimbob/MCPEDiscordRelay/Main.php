@@ -40,16 +40,12 @@ class Main extends PluginBase implements Listener {
 		}
 		
 		if($this->enabled) {
-			$this->getLogger()->info(TextFormat::WHITE . "Plugin is Enabled");
 			$this->sendToDiscord("MCPEDiscordRelay enabled");
-		} else {
-			$this->getLogger()->info(TextFormat::WHITE . "Plugin is Disabled");
 		}
 	}
 	
 	
 	public function onDisable() {
-		$this->sendToDiscord("MCPEDiscordRelay disabled");
 		$this->endTasks();
 		$this->enabled = false;
 		$this->getLogger()->info(TextFormat::WHITE . "Plugin is Disabled");
