@@ -48,7 +48,6 @@ class Main extends PluginBase implements Listener {
 	public function onDisable() {
 		$this->endTasks();
 		$this->enabled = false;
-		$this->getLogger()->info(TextFormat::WHITE . "Plugin is Disabled");
 	}
 	
 	
