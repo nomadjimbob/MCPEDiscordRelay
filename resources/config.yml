@@ -2,6 +2,7 @@
 enabled: true         # Is plugin enabled?
 discord_webhook_url: ""	# The discord webhook URL
 discord_webhook_name: "MCPEDiscordRelay"	# The discord username
+discord_webhook_override: false
 discord_webhook_refresh: 10	# Delay in updating discord
 send_console: true # Send console to Discord
 ...

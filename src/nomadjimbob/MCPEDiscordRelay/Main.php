@@ -54,7 +54,7 @@ class Main extends PluginBase implements Listener {
 	public function onCommand(CommandSender $sender, Command $command, string $label, array $args) : bool{
 		switch($command->getName()){
 			case "version":
-				$sender->sendMessage("1.0.5");
+				$sender->sendMessage("1.0.6");
 				return true;
 			default:
 				return false;
@@ -74,7 +74,9 @@ class Main extends PluginBase implements Listener {
 		$url = $this->getConfig()->get("discord_webhook_url", "");
 		$prefix = "https://discordapp.com/api/webhooks/";
 		$prefixLength = strlen($prefix);
-		if(substr($url, 0, $prefixLength) == $prefix && strlen($url) > $prefixLength) {
+		$prefixOverride = $this->getConfig()->get("discord_webhook_override", false);
+		
+		if(substr($url, 0, $prefixLength) == $prefix && strlen($url) > $prefixLength || $prefixOverride == true) {
 			$this->discordWebHookURL = $url;
 			$this->discordWebHookName = $this->getConfig()->get("discord_webhook_name", "MCPEDiscordRelay");
 		
@@ -96,7 +98,7 @@ class Main extends PluginBase implements Listener {
 				return true;
 			}		
 		} else {
-			$this->getLogger()->info(TextFormat::WHITE . "Webhook URL doesn't look right in config.yml");
+			$this->getLogger()->error(TextFormat::WHITE . "Webhook URL doesn't look right in config.yml. Disabling plugin. Use discord_webhook_override=true in config.yml to override");
 		}
 		
 		$this->endTasks();
