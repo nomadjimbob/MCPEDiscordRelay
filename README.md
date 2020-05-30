@@ -1,4 +1,3 @@
-<a href="https://discord.gg/fpGK9Vr"><img src="https://discordapp.com/api/guilds/699956067781705759/embed.png" alt="Discord server"/></a>
 <a href="https://poggit.pmmp.io/p/MCPEDiscordRelay"><img src="https://poggit.pmmp.io/shield.state/MCPEDiscordRelay"></a>
 
 # MCPEDiscordRelay
