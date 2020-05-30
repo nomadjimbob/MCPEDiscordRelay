@@ -5,9 +5,12 @@ Connect your PocketMine server to output to a Discord channel using a WebHook. B
 
 Version: 1.0.6
 
-Author: Nomadjimbob (hello@jamescollins.com.au)
+Author: Nomadjimbob (james@jamescollins.com.au)
 
 Source: (https://github.com/nomadjimbob/MCPEDiscordRelay)
+
+
+Bugs, issues and feature requests can be made over on the projects github page, under issues  (https://github.com/nomadjimbob/MCPEDiscordRelay/issues)
 
 # Features
   * Relay PocketMine console to Discord
@@ -26,6 +29,19 @@ config.yml options:
 
 **send_console**: Send console to Discord. If false, only sends player chat and commands
 
+### Optional
+
+The following discord webhook embeds are not used by the official discord clients, but maybe used by others. These options maybe removed in the future when removed from the Discord API as they short be considered deprecated.
+
+**discord_webhook_title**: Embed title to use in the webhook
+
+**discord_webhook_description**: Embed description to use in the webhook
+
+**discord_webhook_color**: Embed color to use in the webhook. Hex colors must have # at the start else it will be treated as a number
+
+**discord_webhook_footer**: Embed footer to use in the webhook
+
+
 ## Making a Discord webhook:
 1. Open Discord
 2. Go to your server
@@ -39,16 +55,23 @@ config.yml options:
 As per the original plugin, this does not work on servers hosted on specific devices that do not have 'cURL' installed (eg android phone).
 
 # Change log
-1.0.6 - Added option to override discord_webhook_url with discord_webhook_override=true
+**1.0.6**
+- Added option to override discord_webhook_url with discord_webhook_override=true
 
-1.0.5 - Fixed permission issue
+**1.0.5**
+- Fixed permission issue
 
-1.0.4 - Removed startup/shutdown messages
+**1.0.4**
+- Removed startup/shutdown messages
 
-1.0.3 - Fixed namspace issue
+**1.0.3**
+- Fixed namspace issue
 
-1.0.2 - Fixed version command to report correct version. Added config option send_console
+**1.0.2**
+- Fixed version command to report correct version. Added config option send_console
 
-1.0.1 - Fixed bug with curl response error message missing in certain circumstances
+**1.0.1**
+- Fixed bug with curl response error message missing in certain circumstances
 
-1.0.0 - Inital Release
+**1.0.0**
+- Inital Release

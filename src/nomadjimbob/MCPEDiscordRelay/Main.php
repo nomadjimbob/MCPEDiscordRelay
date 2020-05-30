@@ -21,11 +21,12 @@ use pocketmine\event\player\PlayerCommandPreprocessEvent;
 
 class Main extends PluginBase implements Listener {
 
-	public $attachment						= null;
-	private $enabled							= false;
+	public $attachment				= null;
+	private $enabled				= false;
 	private $discordWebHookURL		= "";
 	private $discordWebHookName		= "";
-        private $task    = null;
+	public $discordWebHookOptions	= null;
+    private $task    = null;
 
 	public function onLoad() {
 
@@ -80,6 +81,36 @@ class Main extends PluginBase implements Listener {
 			$this->discordWebHookURL = $url;
 			$this->discordWebHookName = $this->getConfig()->get("discord_webhook_name", "MCPEDiscordRelay");
 		
+			$webhookOptions = array();
+			$embedOption = $this->getConfig()->get("discord_webhook_title", "");
+			if($embedOption != "") {
+				$webhookOptions["title"] = $embedOption;
+			}
+
+			$embedOption = $this->getConfig()->get("discord_webhook_description", "");
+			if($embedOption != "") {
+				$webhookOptions["description"] = $embedOption;
+			}
+
+			$embedOption = $this->getConfig()->get("discord_webhook_color", "");
+			if($embedOption != "") {
+				if(substr($embedOption, 1, 1) == '#') {
+					$embedOption = hexdec($embedOption);
+				} else {
+					$embedOption = intval($embedOption);
+				}
+				$webhookOptions["color"] = $embedOption;
+			}
+
+			$embedOption = $this->getConfig()->get("discord_webhook_footer", "");
+			if($embedOption != "") {
+				$webhookOptions["footer"] = $embedOption;
+			}
+
+			if(count($webhookOptions) > 0) {
+				$this->discordWebHookOptions = $webhookOptions;
+			}
+
 			if($this->attachment == null) {
 				$this->attachment = new Attachment();
 
@@ -107,10 +138,10 @@ class Main extends PluginBase implements Listener {
 	
 	
 	public function endTasks() {
-                if($this->task != null) {
-                    $this->task->remove();
-                    $this->task = null;
-                }
+		if($this->task != null) {
+			$this->task->remove();
+			$this->task = null;
+		}
 
 		if($this->attachment != null) {
 			$this->getServer()->getLogger()->removeAttachment($this->attachment);
@@ -126,18 +157,18 @@ class Main extends PluginBase implements Listener {
 	}
 
 
-        public function getDiscordWebHookURL() {
-            return $this->discordWebHookURL;
-        }
+	public function getDiscordWebHookURL() {
+		return $this->discordWebHookURL;
+	}
 
 
-        public function getDiscordWebHookName() {
-            return $this->discordWebHookName;
-        }
+	public function getDiscordWebHookName() {
+		return $this->discordWebHookName;
+	}
 
 	public function getEnabled() {
         return $this->enabled;
-        }
+    }
 
 	public function backFromAsync($player, $result) {
 
