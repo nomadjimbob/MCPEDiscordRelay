@@ -57,6 +57,7 @@ As per the original plugin, this does not work on servers hosted on specific dev
 # Change log
 **1.0.6**
 - Added option to override discord_webhook_url with discord_webhook_override=true
+- Added options to use the discord embed feature set
 
 **1.0.5**
 - Fixed permission issue
