@@ -3,7 +3,7 @@
 # MCPEDiscordRelay
 Connect your PocketMine server to output to a Discord channel using a WebHook. Based on the archived plugin [MCPEToDiscord](https://poggit.pmmp.io/p/MCPEToDiscord) by JaxkDev and DiscordMCPE by NiekertDev
 
-Version: 1.0.6
+Version: 1.0.7
 
 Author: Nomadjimbob (james@jamescollins.com.au)
 
@@ -55,6 +55,9 @@ The following discord webhook embeds are not used by the official discord client
 As per the original plugin, this does not work on servers hosted on specific devices that do not have 'cURL' installed (eg android phone).
 
 # Change log
+**1.0.7**
+- Fixed server crash in some configurations
+
 **1.0.6**
 - Added option to override discord_webhook_url with discord_webhook_override=true
 - Added options to use the discord embed feature set

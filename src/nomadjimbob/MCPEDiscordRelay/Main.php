@@ -25,7 +25,7 @@ class Main extends PluginBase implements Listener {
 	private $enabled				= false;
 	private $discordWebHookURL		= "";
 	private $discordWebHookName		= "";
-	public $discordWebHookOptions	= null;
+	public $discordWebHookOptions	= array();
     private $task    = null;
 
 	public function onLoad() {
@@ -55,7 +55,7 @@ class Main extends PluginBase implements Listener {
 	public function onCommand(CommandSender $sender, Command $command, string $label, array $args) : bool{
 		switch($command->getName()){
 			case "version":
-				$sender->sendMessage("1.0.6");
+				$sender->sendMessage("1.0.7");
 				return true;
 			default:
 				return false;
@@ -81,15 +81,14 @@ class Main extends PluginBase implements Listener {
 			$this->discordWebHookURL = $url;
 			$this->discordWebHookName = $this->getConfig()->get("discord_webhook_name", "MCPEDiscordRelay");
 		
-			$webhookOptions = array();
 			$embedOption = $this->getConfig()->get("discord_webhook_title", "");
 			if($embedOption != "") {
-				$webhookOptions["title"] = $embedOption;
+				$this->discordWebHookOptions["title"] = $embedOption;
 			}
 
 			$embedOption = $this->getConfig()->get("discord_webhook_description", "");
 			if($embedOption != "") {
-				$webhookOptions["description"] = $embedOption;
+				$this->discordWebHookOptions["description"] = $embedOption;
 			}
 
 			$embedOption = $this->getConfig()->get("discord_webhook_color", "");
@@ -99,16 +98,12 @@ class Main extends PluginBase implements Listener {
 				} else {
 					$embedOption = intval($embedOption);
 				}
-				$webhookOptions["color"] = $embedOption;
+				$$this->discordWebHookOptions["color"] = $embedOption;
 			}
 
 			$embedOption = $this->getConfig()->get("discord_webhook_footer", "");
 			if($embedOption != "") {
-				$webhookOptions["footer"] = $embedOption;
-			}
-
-			if(count($webhookOptions) > 0) {
-				$this->discordWebHookOptions = $webhookOptions;
+				$$this->discordWebHookOptions["footer"] = $embedOption;
 			}
 
 			if($this->attachment == null) {
