@@ -24,7 +24,7 @@ class Broadcast extends Task {
             "username"	=> $this->main->getDiscordWebHookName()
         ];
 
-        if($options != null || count($options) > 0) {
+        if($options != null && count($options) > 0) {
             $embed = [];
             if(in_array("title", $options)) {
                 $embed["title"] = $options["title"];
