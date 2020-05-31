@@ -55,7 +55,7 @@ class Main extends PluginBase implements Listener {
 	public function onCommand(CommandSender $sender, Command $command, string $label, array $args) : bool{
 		switch($command->getName()){
 			case "version":
-				$sender->sendMessage("1.0.7");
+				$sender->sendMessage("1.0.8");
 				return true;
 			default:
 				return false;
