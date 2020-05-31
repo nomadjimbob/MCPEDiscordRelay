@@ -17,8 +17,10 @@ A clear and concise description of what you expected to happen.
  - MCPEDiscordRelay Version [e.g 1.0.6]
  - PocketMine Version [e.g. 1.13.2]
 
+**Was it working in a previous version of MCPEDiscordRelay?**
+
 **Other Plugins**
-Have you tried disabling other plugs to check if there is a conflict? Yes|No
+Have you tried disabling other plugs to check if there is a conflict?
 
 What are the other plugins that you have installed?
 
