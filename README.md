@@ -1,6 +1,9 @@
 <img src="https://i.imgur.com/POnNBZX.png" width="100%">
 
 # MCPEDiscordRelay
+
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/c174050466234be19295f1e590d819d2)](https://app.codacy.com/manual/nomadjimbob/MCPEDiscordRelay?utm_source=github.com&utm_medium=referral&utm_content=nomadjimbob/MCPEDiscordRelay&utm_campaign=Badge_Grade_Dashboard)
+
 <a href="https://poggit.pmmp.io/p/MCPEDiscordRelay"><img src="https://poggit.pmmp.io/shield.state/MCPEDiscordRelay"></a>
 
 ### Connect your Minecraft PocketMine server chat and console to a Discord channel.
