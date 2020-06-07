@@ -53,7 +53,7 @@ If you are a coder, feel free to create a pull request, but please be detailed a
 
 The following discord webhook embeds are not used by the official discord clients, but maybe used by others. These options maybe removed in the future when removed from the Discord API as they short be considered deprecated.
 
-* **discord_webhook_title** (string) - The embed title string to send to Discord.
+* **discord_webhook_title** (string) - The embed title string to send to Discord
 * **discord_webhook_description** (string) - The embed description string to send to Discord
 * **discord_webhook_color** (hex color|number) - The embed color to send to Discord. Hex colors must start with a hashtag
 * **discord_webhook_footer** (string) - The embed footer to send to Discord
