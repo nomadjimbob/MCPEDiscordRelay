@@ -37,6 +37,8 @@ You should now see your server outputting to your Discord channel.
 
 If you think you have found a problem, or would like to see a feature, please [open an issue](https://github.com/nomadjimbob/MCPEDiscordRelay/issues).
 
+Features for the next release can be found in the [next release TODO issue](https://github.com/nomadjimbob/MCPEDiscordRelay/issues/8).
+
 If you are a coder, feel free to create a pull request, but please be detailed about your changes!
 
 ## Detailed configuration
