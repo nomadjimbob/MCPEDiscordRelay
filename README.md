@@ -4,7 +4,7 @@
 <a href="https://poggit.pmmp.io/p/MCPEDiscordRelay"><img src="https://poggit.pmmp.io/shield.state/MCPEDiscordRelay"></a>
 [![License](https://img.shields.io/github/license/nomadjimbob/MCPEDiscordRelay?color=green)](https://github.com/nomadjimbob/MCPEDiscordRelay/LICENSE)
 [![Codacy Badge](https://app.codacy.com/project/badge/Grade/269998f58fcf461cae2a3cc17ba35720)](https://www.codacy.com/manual/nomadjimbob/MCPEDiscordRelay?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=nomadjimbob/MCPEDiscordRelay&amp;utm_campaign=Badge_Grade)
-[![Downloads](https://img.shields.io/github/downloads/nomadjimbob/MCPEDiscordRelay/total?color=blue)](https://github.com/nomadjimbob/MCPEDiscordRelay/releases/latest)
+[![Downloads](https://poggit.pmmp.io/shield.dl.total/MCPEDiscordRelay)](https://poggit.pmmp.io/p/MCPEDiscordRelay)
 [![Version](https://img.shields.io/github/v/release/nomadjimbob/MCPEDIscordRelay)](https://github.com/nomadjimbob/MCPEDiscordRelay/releases/latest)
 [![Donate to this project using Paypal](https://img.shields.io/badge/paypal-donate-yellow.svg)](https://www.paypal.me/nomadjimbob)
 [![Donate to this project using Ko-Fi](https://img.shields.io/badge/kofi-donate-yellow.svg)](https://www.ko-fi.com/nomadjimbob)
