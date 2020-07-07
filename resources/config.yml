@@ -5,6 +5,7 @@ discord_webhook_name: "MCPEDiscordRelay"	# The discord username
 discord_webhook_override: false
 discord_webhook_refresh: 10	# Delay in updating discord
 send_console: true # Send console to Discord
+show_player_events: true # Tell when a player joins/leaves the server
 discord_webhook_title: "" # Embed title to use in the webhook [optional]
 discord_webhook_description: "" # Embed description to use in the webhook [optional]
 discord_webhook_color: "" # Embed color to use in the webhook. Hex colors must have hashtag at the start else it will be treated as a number [optional]

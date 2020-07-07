@@ -18,6 +18,9 @@ use pocketmine\command\Command;
 use pocketmine\command\CommandSender;
 use pocketmine\scheduler\TaskHandler;
 use pocketmine\event\player\PlayerCommandPreprocessEvent;
+use pocketmine\event\player\PlayerJoinEvent;
+use pocketmine\event\player\PlayerQuitEvent;
+
 
 class Main extends PluginBase implements Listener {
 
@@ -71,7 +74,24 @@ class Main extends PluginBase implements Listener {
     }
 	
 	
-	public function initTasks() {
+    public function onJoin(PlayerJoinEvent $event)
+    {
+        if($this->getConfig()->get("show_player_events") !== false) {
+            $player = $event->getPlayer();
+            $this->sendToDiscord("<".$player->getName()."> joined the server");
+        }
+    }
+
+    public function onQuit(PlayerQuitEvent $event)
+    {
+        if($this->getConfig()->get("show_player_events") !== false) {
+            $player = $event->getPlayer();
+            $this->sendToDiscord("<".$player->getName()."> left the server");
+        }
+    }
+
+
+    public function initTasks() {
 		$url = $this->getConfig()->get("discord_webhook_url", "");
 		$prefix = "https://discordapp.com/api/webhooks/";
 		$prefixLength = strlen($prefix);
