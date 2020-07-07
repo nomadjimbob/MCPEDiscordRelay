@@ -21,7 +21,7 @@
 
 It's is easy to get going...
 
-1. [Download the latest release](https://github.com/nomadjimbob/MCPEDiscordRelay/releases/download/v1.0.7/MCPEDiscordRelay.phar.zip) and place it in your plugins folder
+1. [Download the latest release](https://github.com/nomadjimbob/MCPEDiscordRelay/releases/download/v1.0.8/MCPEDiscordRelay.phar.zip) and place it in your plugins folder
 2. Restart your Minecraft server. This will create a MCPEDiscordRelay folder containing the config.yml file in your plugins folder
 3. Open your Discord server and create or open a chat channel
 4. Click on the settings icon beside your chat channel name
@@ -47,6 +47,7 @@ If you are a coder, feel free to create a pull request, but please be detailed a
 * **discord_webhook_refresh** (number) - The amount of seconds to wait before updating Discord. Setting this number too low may cause Discord to take spam action
 * **discord_webhook_override** (true|false) - The plugin verifies the Discord Webhook URL against its own internal checks. If the plugin thinks your Webhook URL is wrong, it will disable itself. If you know better, set this to true to override the check
 * **send_console** (true|false) - The default is to just send player chat and commands to Discord. If you would like to also send the servers console, set this to true
+* **show_player_events** (true|false) - Send when a player joins/leaves the server to Discord
 
 #### Discord Embed options
 
