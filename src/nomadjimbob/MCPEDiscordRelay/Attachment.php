@@ -3,6 +3,7 @@ namespace nomadjimbob\MCPEDiscordRelay;
 
 use pocketmine\Server;
 use pocketmine\utils\Terminal;
+use pocketmine\utils\TextFormat;
 
 class Attachment extends \ThreadedLoggerAttachment implements \LoggerAttachment {
 
@@ -14,7 +15,9 @@ class Attachment extends \ThreadedLoggerAttachment implements \LoggerAttachment 
     }
 
     public function log($level, $message) {
-        $msg = Terminal::toANSI($message) . "\r\n";
+        $cleanMsg = TextFormat::clean($message);
+        
+        $msg = Terminal::toANSI($cleanMsg) . "\r\n";
         if($this->enabled) {
             $this->stream.= $msg;
         }
