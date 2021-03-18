@@ -133,13 +133,15 @@ class Main extends PluginBase implements Listener {
 				} else {
 					$embedOption = intval($embedOption);
 				}
-				$$this->discordWebHookOptions["color"] = $embedOption;
+				$this->discordWebHookOptions["color"] = $embedOption;
 			}
 
 			$embedOption = $this->getConfig()->get("discord_webhook_footer", "");
 			if($embedOption != "") {
-				$$this->discordWebHookOptions["footer"] = $embedOption;
+				$this->discordWebHookOptions["footer"] = $embedOption;
 			}
+      
+      $this->discordWebHookOptions["enable_pings"] = ($this->getConfig()->get("enable_pings", true) === true);
 
 			if($this->attachment == null) {
 				$this->attachment = new Attachment();

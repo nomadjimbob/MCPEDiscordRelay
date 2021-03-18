@@ -24,22 +24,27 @@ class Broadcast extends Task {
             "username"	=> $this->main->getDiscordWebHookName()
         ];
 
-        if($options != null && count($options) > 0) {
-            $embed = [];
-            if(in_array("title", $options)) {
+        if(is_array($options) && count($options) > 0) {
+            $embed = Array();
+            if(array_key_exists("title", $options)) {
+                
                 $embed["title"] = $options["title"];
             }
 
-            if(in_array("description", $options)) {
+            if(array_key_exists("description", $options)) {
                 $embed["description"] = $options["description"];
             }
 
-            if(in_array("color", $options)) {
+            if(array_key_exists("color", $options)) {
                 $embed["color"] = $options["color"];
             }
 
-            if(in_array("footer", $options)) {
+            if(array_key_exists("footer", $options)) {
                 $embed["footer"] = array("text" => $options["footer"]);
+            }
+            
+            if(array_key_exists("enable_pings", $options) && $options["enable_pings"] !== true) {
+              $curlopts["allowed_mentions"]["parse"] = Array();
             }
 
             $curlopts["embed"] = $embed;
