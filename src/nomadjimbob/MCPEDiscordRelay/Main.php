@@ -93,11 +93,26 @@ class Main extends PluginBase implements Listener {
 
     public function initTasks() {
 		$url = $this->getConfig()->get("discord_webhook_url", "");
-		$prefix = "https://discordapp.com/api/webhooks/";
-		$prefixLength = strlen($prefix);
-		$prefixOverride = $this->getConfig()->get("discord_webhook_override", false);
 		
-		if(substr($url, 0, $prefixLength) == $prefix && strlen($url) > $prefixLength || $prefixOverride == true) {
+    $prefixMatch = $this->getConfig()->get("discord_webhook_override", false);
+    
+    if(!$prefixMatch) {
+      $prefix = "https://discordapp.com/api/webhooks/";
+  		$prefixLength = strlen($prefix);
+      if(substr($url, 0, $prefixLength) == $prefix && strlen($url) > $prefixLength) {
+        $prefixMatch = true;
+      }
+    }
+    
+    if(!$prefixMatch) {
+      $prefix = "https://discord.com/api/webhooks/";
+  		$prefixLength = strlen($prefix);
+      if(substr($url, 0, $prefixLength) == $prefix && strlen($url) > $prefixLength) {
+        $prefixMatch = true;
+      }
+    }
+    
+		if($prefixMatch) {
 			$this->discordWebHookURL = $url;
 			$this->discordWebHookName = $this->getConfig()->get("discord_webhook_name", "MCPEDiscordRelay");
 		
