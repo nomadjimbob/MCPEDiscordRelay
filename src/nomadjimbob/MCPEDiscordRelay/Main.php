@@ -29,7 +29,7 @@ class Main extends PluginBase implements Listener {
 	private $discordWebHookURL		= "";
 	private $discordWebHookName		= "";
 	public $discordWebHookOptions	= array();
-    private $task    = null;
+  private $task    = null;
 
 	public function onLoad() {
 
@@ -58,7 +58,7 @@ class Main extends PluginBase implements Listener {
 	public function onCommand(CommandSender $sender, Command $command, string $label, array $args) : bool{
 		switch($command->getName()){
 			case "version":
-				$sender->sendMessage("1.0.8");
+				$sender->sendMessage("1.0.9");
 				return true;
 			default:
 				return false;
