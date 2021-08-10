@@ -18,7 +18,7 @@ class Broadcast extends Task {
         }
     }
 
-    public function sendToDiscord(string $player = "nolog", string $msg, array $options) {
+    public function sendToDiscord(string $player = "nolog", string $msg = "", array $options = []) {
         $curlopts = [
             "content"    => $msg,
             "username"	=> $this->main->getDiscordWebHookName()
