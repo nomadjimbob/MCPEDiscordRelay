@@ -21,7 +21,7 @@
 
 It's is easy to get going...
 
-1. [Download the latest release](https://github.com/nomadjimbob/MCPEDiscordRelay/releases/download/v1.0.8/MCPEDiscordRelay.phar.zip) and place it in your plugins folder
+1. [Download the latest release](https://github.com/nomadjimbob/MCPEDiscordRelay/releases/latest/download/MCPEDiscordRelay.phar) and place it in your plugins folder
 2. Restart your Minecraft server. This will create a MCPEDiscordRelay folder containing the config.yml file in your plugins folder
 3. Open your Discord server and create or open a chat channel
 4. Click on the settings icon beside your chat channel name
