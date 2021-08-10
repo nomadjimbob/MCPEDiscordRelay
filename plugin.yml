@@ -1,6 +1,6 @@
 name: MCPEDiscordRelay
 main: nomadjimbob\MCPEDiscordRelay\Main
-version: 1.0.9
+version: 1.0.10
 api: 3.0.0
 author: Nomadjimbob
 description: Send console to a discord server
