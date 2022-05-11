@@ -5,9 +5,6 @@
 [![License](https://img.shields.io/github/license/nomadjimbob/MCPEDiscordRelay?color=green)](https://github.com/nomadjimbob/MCPEDiscordRelay/LICENSE)
 [![Downloads](https://poggit.pmmp.io/shield.dl.total/MCPEDiscordRelay)](https://poggit.pmmp.io/p/MCPEDiscordRelay)
 [![Version](https://img.shields.io/github/v/release/nomadjimbob/MCPEDIscordRelay)](https://github.com/nomadjimbob/MCPEDiscordRelay/releases/latest)
-[![Donate to this project using Paypal](https://img.shields.io/badge/paypal-donate-yellow.svg)](https://www.paypal.me/nomadjimbob)
-[![Donate to this project using Ko-Fi](https://img.shields.io/badge/kofi-donate-yellow.svg)](https://www.ko-fi.com/nomadjimbob)
-
 
 ### Connect your Minecraft PocketMine server chat and console to a Discord channel.
 
